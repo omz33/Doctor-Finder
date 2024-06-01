@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Finder</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .hero {
+            position:relative;
+        }
+
+        .auth {
+            position: absolute;
+            top: 10px;
+            right: 0;
+            padding: 10px;
+        }
+
+        .specialty-button {
+            background: #343a40; 
+            color: #f8f9fa; 
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background 0.3s ease, opacity 0.5s ease, transform 0.5s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .specialty-button.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .specialty-button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="social-media">
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="search-bar" style="margin: 0 auto 0 250px;">
+                <input type="text" placeholder="Search doctors Here">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#"><i class="fa fa-user-md"></i> Doctors</a>
+                        <ul class="dropdown">
+                            <li><a href="#">By Name</a></li>
+                            <li><a href="#">By Language</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-language"></i> Language</a>
+                        <ul class="dropdown">
+                            <li><a href="#">English</a></li>
+                            <li><a href="#">Arabic</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="auth">
+                <a href="#" class="login"><i class="fas fa-sign-in-alt"></i> Login</a>
+                <a href="#" class="signup"><i class="fas fa-user-plus"></i> Signup</a>
+            </div>
+            <h1 class="hero-title">Find Your Doctor</h1>
+            <form class="search-form">
+                <div class="form-group">
+                    <label for="specialty">Choose a Specialty:</label>
+                    <select id="specialty">
+                        <option value="cardiology">Cardiology</option>
+                        <option value="dermatology">Dermatology</option>
+                        <option value="neurology">Neurology</option>
+                        <option value="pediatrics">Pediatrics</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="location">Choose Location:</label>
+                    <select id="location">
+                        <option value="riyadh">Riyadh</option>
+                        <option value="jeddah">Jeddah</option>
+                        <option value="dammam">Dammam</option>
+                        <option value="mecca">Mecca</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="area">Choose Area:</label>
+                    <select id="area">
+                        <!-- Areas will be populated based on the selected location -->
+                    </select>
+                </div>
+                <button type="submit">Find a Doctor</button>
+            </form>
+        </div>
+    </section>
+    
+    <section class="new-section">
+        <div class="container">
+            <h2 class="specialty-title">Popular Specialities</h2>
+            <div class="button-container">
+                <button class="specialty-button">Gastroenterologist</button>
+                <button class="specialty-button">Psychiatrist</button>
+                <button class="specialty-button">Dermatologist</button>
+                <button class="specialty-button">Urologist</button>
+                <button class="specialty-button">Neurologist</button>
+                <button class="specialty-button">Psychologist</button>
+                <button class="specialty-button">Gynecologist</button>
+                <button class="specialty-button">Orthopedic Surgeon</button>
+                <button class="specialty-button">Ophthalmologist (Eye Doctor)</button>
+                <button class="specialty-button">Endocrinologist</button>
+                <button class="specialty-button">Ear-Nose-Throat (ENT)</button>
+                <button class="specialty-button">Home Visit</button>
+                <button class="specialty-button">Dentist</button>
+                <button class="specialty-button">Pediatrician</button>
+                <button class="specialty-button">Oral Maxillofacial Surgeon</button>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Doctor Finder. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
